@@ -1,0 +1,21 @@
+{
+    "name": "jeffersoncarvalho/yii2-quagga",
+    "description": "QuaggaJS",
+    "type": "library",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jefferson Carvalho",
+            "email": "jefferson.carvalho@funarbe.org.br"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "jeffersoncarvalho\\quagga\\": ""
+        }
+    }
+}

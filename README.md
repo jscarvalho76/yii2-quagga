@@ -27,6 +27,7 @@ Usage
 
 Once the extension is installed, simply use it in your code by  :
 
+PHP
 ```php
 <?php
     use jeffersoncarvalho\quagga\Quagga;
@@ -39,7 +40,7 @@ Once the extension is installed, simply use it in your code by  :
 
 ```
 
-
+JavaScript
 ```javascript
 Quagga.onDetected(function(data){
     document.getElementById('result').value = data.codeResult.code;

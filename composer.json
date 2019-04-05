@@ -4,10 +4,11 @@
     "type": "library",
     "keywords": ["yii2","extension"],
     "license": "MIT",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Jefferson Carvalho",
-            "email": "jefferson.carvalho@funarbe.org.br"
+            "homepage": "http://www.jeffersoncarvalho.com.br/"
         }
     ],
     "require": {

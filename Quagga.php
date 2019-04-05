@@ -30,7 +30,7 @@ class Quagga extends Widget
                     <input id="scanner_input" class="form-control" placeholder="Click the button to scan an EAN..." type="text" />
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button" data-toggle="modal" data-target="#livestream_scanner">
-                            <i class="fa fa-barcode"></i>
+                            <i class="glyphicon glyphicon-barcode"></i>
                         </button>
                     </span>
                 </div><!-- /input-group -->

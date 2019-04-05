@@ -25,6 +25,7 @@ class Quagga extends Widget
     public function video()
     {
         $video = '<div id="'.$this->id.'" class="viewport interactive"></div>';
+        $video .= '<div class="error"></div>';
         return $video;
     }
 }

@@ -8,7 +8,7 @@ class QuaggaAsset extends AssetBundle
 {
     public $js = [
         'js/quagga.min.js',
-        'js/leitor.js'
+        'js/quagga_modal.js'
     ];
 
     public $css = [

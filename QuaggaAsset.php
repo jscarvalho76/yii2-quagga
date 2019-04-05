@@ -12,6 +12,7 @@ class QuaggaAsset extends AssetBundle
     ];
 
     public $css = [
+        'css/quagga.css',
     ];
 
     public $depends = [

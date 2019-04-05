@@ -31,11 +31,8 @@ PHP
 ```php
 <?php
     use jeffersoncarvalho\quagga\Quagga;
-    use yii\helpers\Html;
-    
-    echo Html::textInput('result', '', ['class' => 'form-control', 'id'=>'result']);
-    
-    echo jeffersoncarvalho\quagga\Quagga::widget(); 
+   
+    echo Quagga::widget(); 
 ?>
 
 ```
@@ -43,6 +40,6 @@ PHP
 JavaScript
 ```javascript
 Quagga.onDetected(function(data){
-    document.getElementById('result').value = data.codeResult.code;
+    console.log("Barcode detected and processed : [" + result.codeResult.code + "]", result);
 });
 ```

@@ -4,18 +4,9 @@ Quagga.init({
     inputStream : {
         name : "Live",
         type : "LiveStream",
-        constraints: {
-            facingMode: "environment",
-            aspectRatio: {min: 2, max: 4},
-            width: 320,
-        },
+        numOfWorkers: navigator.hardwareConcurrency,
         target: document.querySelector('#'+id)    // Or '#yourElement' (optional)
     },
-    locator: {
-        patchSize: "medium",
-        halfSample: true
-    },
-    locate: true,
     decoder : {
         readers : ["ean_reader", "upc_reader"]
     }

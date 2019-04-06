@@ -4,61 +4,62 @@ namespace jeffersoncarvalho\quagga;
 
 use yii\web\AssetBundle;
 use yii\base\Widget;
+use yii\web\View;
 
 /**
  * This is just an example.
  */
 class Quagga extends Widget
 {
-    public $id;
+    /**
+     * @var type string idForm of the widget
+     */
+    protected $id;
+
+    /**
+     * @var type string input of the widget
+     */
+    protected $input;
+
+    /**
+     * @var type string action of the widget
+     */
+    public $action;
+
 
     public function run()
     {
-        parent::init();
-        QuaggaAsset::register($this->getView());
-        if ($this->id === null) {
-            $this->id = 'interactive';
+        $view = $this->getView();
+
+        QuaggaAsset::register($view);
+
+        if ($this->input === null) {
+            $this->input = 'scanner_input';
         }
+
+        if ($this->id === null) {
+            $this->id = 'leitorEan';
+        }
+
+        if ($this->action=== null) {
+            $this->action = '/';
+            QuaggaDefaultAsset::register($view);
+        }else{
+            QuaggaSubmitAsset::register($view);
+        }
+
         return $this->video();
+
+        //$view->registerJs("jQuery('{$this->target}').fancybox({$config});");
     }
 
     public function video()
-    { ?>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="input-group">
-                    <input id="scanner_input" class="form-control" placeholder="Click the button to scan an EAN..." type="text" />
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" data-toggle="modal" data-target="#livestream_scanner">
-                            <i class="glyphicon glyphicon-barcode"></i>
-                        </button>
-                    </span>
-                </div><!-- /input-group -->
-            </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-        <div class="modal" id="livestream_scanner">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="modal-title">Barcode Scanner</h4>
-                    </div>
-                    <div class="modal-body" style="position: static">
-                        <div id="interactive" class="viewport"></div>
-                        <div class="error"></div>
-                    </div>
-                    <div class="modal-footer">
-                        <label class="btn btn-default pull-left">
-                            <i class="fa fa-camera"></i> Use camera app
-                            <input type="file" accept="image/*;capture=camera" capture="camera" class="hidden" />
-                        </label>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
-<?php
+    {
+        return $this->render('ean',[
+            'action' => $this->action,
+            'id' => $this->id,
+            'scanner_input' => $this->input,
+        ]);
     }
+
 }

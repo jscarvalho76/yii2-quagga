@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist jeffersoncarvalho/yii2-quagga "~1.0.1"
+composer require --prefer-dist jeffersoncarvalho/yii2-quagga "~1.0.2"
 ```
 
 or add
 
 ```
-"jeffersoncarvalho/yii2-quagga": "~1.0.1"
+"jeffersoncarvalho/yii2-quagga": "~1.0.2"
 ```
 
 to the require section of your `composer.json` file.

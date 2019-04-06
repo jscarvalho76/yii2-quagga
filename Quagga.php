@@ -5,6 +5,7 @@ namespace jeffersoncarvalho\quagga;
 use yii\web\AssetBundle;
 use yii\base\Widget;
 use yii\web\View;
+use yii\helpers\Json;
 
 /**
  * This is just an example.

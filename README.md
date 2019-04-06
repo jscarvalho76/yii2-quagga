@@ -36,10 +36,3 @@ PHP
 ?>
 
 ```
-
-JavaScript
-```javascript
-Quagga.onDetected(function(data){
-    console.log("Barcode detected and processed : [" + result.codeResult.code + "]", result);
-});
-```

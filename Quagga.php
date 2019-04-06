@@ -25,6 +25,16 @@ class Quagga extends Widget
      * @var type string action of the widget
      */
     public $action;
+    
+    /**
+     * @var type array  action of the widget
+     */
+    public $config = [];
+
+    /**
+     * @var type boolean  action of the widget
+     */
+    public $submit = false;
 
 
     public function run()
@@ -33,24 +43,20 @@ class Quagga extends Widget
 
         QuaggaAsset::register($view);
 
-        if ($this->input === null) {
+        if ($this->input === null)
             $this->input = 'scanner_input';
-        }
 
-        if ($this->id === null) {
+        if ($this->id === null)
             $this->id = 'leitorEan';
-        }
 
-        if ($this->action=== null) {
+        if ($this->action=== null)
             $this->action = '/';
-            QuaggaDefaultAsset::register($view);
-        }else{
-            QuaggaSubmitAsset::register($view);
-        }
+
+        $config = Json::encode($this);
+
+        $view->registerJs("let dataQuagga = {$config};", View::POS_BEGIN);
 
         return $this->video();
-
-        //$view->registerJs("jQuery('{$this->target}').fancybox({$config});");
     }
 
     public function video()
@@ -61,5 +67,4 @@ class Quagga extends Widget
             'scanner_input' => $this->input,
         ]);
     }
-
 }

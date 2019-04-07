@@ -1,9 +1,9 @@
 {
     "name": "jeffersoncarvalho/yii2-quagga",
-    "description": "QuaggaJS for Yii2 EAN13",
-    "type": "library",
+    "description": "The QuaggaJS for Yii2 EAN13 extension for the Yii framework",
     "keywords": ["yii2","extension", "QuaggaJS", "Quagga", "EAN13"],
-    "license": "MIT",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
     "minimum-stability": "stable",
     "authors": [
         {

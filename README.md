@@ -44,7 +44,7 @@ PHP
 ```
 ## Licence
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The BSD 3-Clause "New" or "Revised" License. Please see [License File](LICENSE.md) for more information.
 
 
 [ico-version]: https://img.shields.io/packagist/v/jeffersoncarvalho/yii2-quagga.svg?style=flat-square

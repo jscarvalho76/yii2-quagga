@@ -15,12 +15,12 @@ class Quagga extends Widget
     /**
      * @var type string idForm of the widget
      */
-    protected $id;
+    public $id;
 
     /**
      * @var type string input of the widget
      */
-    protected $input;
+    public $input;
 
     /**
      * @var type string action of the widget
@@ -62,10 +62,8 @@ class Quagga extends Widget
 
     public function video()
     {
-        return $this->render('ean',[
-            'action' => $this->action,
-            'id' => $this->id,
-            'scanner_input' => $this->input,
+        return $this->render('_ready',[
+            'model' => $this,
         ]);
     }
 }

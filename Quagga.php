@@ -36,6 +36,11 @@ class Quagga extends Widget
      * @var type boolean  action of the widget
      */
     public $submit = false;
+    
+    /**
+     * @var type boolean  action of the widget
+     */
+    public $modal = true;
 
 
     public function run()

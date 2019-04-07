@@ -1,6 +1,5 @@
 {
     "name": "jeffersoncarvalho/yii2-quagga",
-    "version": "1.0.5",
     "description": "QuaggaJS for Yii2 EAN13",
     "type": "library",
     "keywords": ["yii2","extension", "QuaggaJS", "Quagga", "EAN13"],

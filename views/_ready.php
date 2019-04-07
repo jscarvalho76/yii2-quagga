@@ -10,7 +10,7 @@ use yii\web\View;
 
 <?php if($model->submit): ?>
 
-    <?php $form = ActiveForm::begin(['id' => $model->id, 'action' => \yii\helpers\Url::toRoute($model->action)]); ?>
+    <?php $form = ActiveForm::begin(['id' => $model->id, 'action' => \yii\helpers\Url::To($model->action)]); ?>
         <div class="input-group">
             <?= Html::textInput($model->input, '', [
                 'id' => $model->input,

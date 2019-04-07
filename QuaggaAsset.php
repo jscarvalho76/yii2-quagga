@@ -7,6 +7,7 @@ use yii\web\AssetBundle;
 class QuaggaAsset extends AssetBundle
 {
     public $js = [
+        'js/barcode.js',
         'js/quagga.min.js',
         'js/quagga_modal.js'
     ];

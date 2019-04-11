@@ -25,7 +25,7 @@ class Quagga extends Widget
     /**
      * @var type string action of the widget
      */
-    public $action;
+    public $action = null;
     
     /**
      * @var type array  action of the widget
@@ -58,9 +58,6 @@ class Quagga extends Widget
 
         if ($this->id === null)
             $this->id = 'leitorEan';
-
-        if ($this->action=== null)
-            $this->action = '/';
 
         $config = Json::encode($this);
 

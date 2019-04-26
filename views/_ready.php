@@ -16,7 +16,7 @@ use yii\web\View;
                 'id' => $model->input,
                 'alt' => "Click the button to scan an EAN...",
                 'class' => 'form-control',
-                'placeholder' => "Click the button to scan an EAN..."
+                'placeholder' => "Clique no botão para ler o EAN..."
             ]);
             ?>
 
@@ -27,7 +27,7 @@ use yii\web\View;
                         <?php else: ?>
                         value="Scan" onclick="getScan();"
                         <?php endif; ?>
-                        title="Click the button to scan an EAN..."  >
+                        title="Clique no botão para ler o EAN..."  >
                     <i class="fa fa-barcode"></i>
                 </button>
             </span>
@@ -44,7 +44,7 @@ use yii\web\View;
                 <?= Html::textInput($model->input, '', [
                     'id' => $model->input,
                     'class' => 'form-control',
-                    'placeholder' => "Click the button to scan an EAN..."
+                    'placeholder' => "Clique no botão para ler o EAN..."
                 ]);
                 ?>
 
@@ -56,7 +56,7 @@ use yii\web\View;
                         <?php else: ?>
                             value="Scan" onclick="getScan();"
                         <?php endif; ?>
-                        title="Click the button to scan an EAN..."  >
+                        title="Clique no botão para ler o EAN..."  >
                         <i class="fa fa-barcode"></i>
                     </button>
 

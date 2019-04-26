@@ -12,9 +12,9 @@ use yii\web\View;
 
     <?php $form = ActiveForm::begin(['id' => $model->id, 'action' => \yii\helpers\Url::To($model->action), 'method' => $model->method]); ?>
         <div class="input-group">
-            <?= Html::textInput($model->input, '', [
+            <?= Html::input('number', $model->input, '', [
                 'id' => $model->input,
-                'alt' => "Click the button to scan an EAN...",
+                'alt' => "Clique no botão para ler o EAN...",
                 'class' => 'form-control',
                 'placeholder' => "Clique no botão para ler o EAN..."
             ]);
@@ -41,7 +41,7 @@ use yii\web\View;
         <div class="col-lg-12">
             <div class="input-group">
 
-                <?= Html::textInput($model->input, '', [
+                <?= Html::input('number', $model->input, '', [
                     'id' => $model->input,
                     'class' => 'form-control',
                     'placeholder' => "Clique no botão para ler o EAN..."

@@ -6,6 +6,7 @@ use yii\web\AssetBundle;
 use yii\base\Widget;
 use yii\web\View;
 use yii\helpers\Json;
+use yii\i18n\PhpMessageSource;
 
 /**
  * This is just an example.
@@ -46,6 +47,12 @@ class Quagga extends Widget
      * @var type string  action of the widget default post
      */
     public $method = 'post';
+    
+    public function init()
+    {
+        parent::init();
+        $this->registerTranslations();
+    }
 
     public function run()
     {
@@ -71,5 +78,14 @@ class Quagga extends Widget
         return $this->render('_ready',[
             'model' => $this,
         ]);
+    }
+    
+    public function registerTranslations()
+    {
+        \Yii::$app->i18n->translations['quagga'] = [
+            'class' => PhpMessageSource::class,
+            'basePath' => __DIR__ . '/messages',
+            'forceTranslation' => true,
+        ];
     }
 }

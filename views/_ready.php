@@ -14,9 +14,9 @@ use yii\web\View;
         <div class="input-group">
             <?= Html::input('number', $model->input, '', [
                 'id' => $model->input,
-                'alt' => "Clique no botão para ler o EAN...",
+                'alt' => \Yii::t('quagga', 'Click the button to scan an EAN...'),
                 'class' => 'form-control',
-                'placeholder' => "Clique no botão para ler o EAN..."
+                'placeholder' => \Yii::t('quagga', 'Click the button to scan an EAN...')
             ]);
             ?>
 
@@ -27,7 +27,7 @@ use yii\web\View;
                         <?php else: ?>
                         value="Scan" onclick="getScan();"
                         <?php endif; ?>
-                        title="Clique no botão para ler o EAN..."  >
+                        title="<?=\Yii::t('quagga', 'Click the button to scan an EAN...');?>"  >
                     <i class="fa fa-barcode"></i>
                 </button>
             </span>
@@ -44,7 +44,7 @@ use yii\web\View;
                 <?= Html::input('number', $model->input, '', [
                     'id' => $model->input,
                     'class' => 'form-control',
-                    'placeholder' => "Clique no botão para ler o EAN..."
+                    'placeholder' => \Yii::t('quagga', 'Click the button to scan an EAN...')
                 ]);
                 ?>
 
@@ -56,7 +56,7 @@ use yii\web\View;
                         <?php else: ?>
                             value="Scan" onclick="getScan();"
                         <?php endif; ?>
-                        title="Clique no botão para ler o EAN..."  >
+                        title="<?=\Yii::t('quagga', 'Click the button to scan an EAN...');?>"  >
                         <i class="fa fa-barcode"></i>
                     </button>
 

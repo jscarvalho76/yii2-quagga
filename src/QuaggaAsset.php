@@ -24,7 +24,7 @@ class QuaggaAsset extends AssetBundle
     public function init()
     {
         // Tell AssetBundle where the assets files are
-        $this->sourcePath = "@jeffersoncarvalho/quagga/assets";
+        $this->sourcePath = __DIR__ . "/assets";
         parent::init();
     }
 }

@@ -8,4 +8,6 @@
 return [
     'Application' => 'Quagga',
     'Click the button to scan an EAN...' => 'Clique no botão para ler o EAN...',
+    'Close' => 'Sair',
+    'Barcode Scanner Ean' => 'Leitor de código EAN',
 ];
